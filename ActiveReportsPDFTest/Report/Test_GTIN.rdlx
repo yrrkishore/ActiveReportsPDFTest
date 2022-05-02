@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+  <dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Test_GTIN.rdlx</dd:Name>
+  <Body>
+    <Height>2in</Height>
+    <ReportItems>
+      <Table Name="Table1">
+        <Top>0.25in</Top>
+        <Left>0.875in</Left>
+        <Width>5.125in</Width>
+        <Height>1.375in</Height>
+        <Style>
+          <FontFamily>Arial</FontFamily>
+        </Style>
+        <DataSetName>DataSet1</DataSetName>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>0.458333in</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox1">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <DataElementName>gtin1</DataElementName>
+                      <Value>=First(Fields!gtin.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox2">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox3">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>0.458333in</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox4">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <DataElementName>product Image Url</DataElementName>
+                      <Value>=Fields!value2.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox5">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox6">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>0.458333in</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Image Name="Image1">
+                      <DataElementName>Image1</DataElementName>
+                      <Style>
+                        <FontFamily>Arial</FontFamily>
+                      </Style>
+                      <Sizing>AutoSize</Sizing>
+                      <Source>External</Source>
+                      <Value>=Fields!value2.Value</Value>
+                    </Image>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox8">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="TextBox9">
+                      <Style>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <TableColumns>
+          <TableColumn>
+            <Width>1.708333in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.708333in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.708333in</Width>
+          </TableColumn>
+        </TableColumns>
+      </Table>
+    </ReportItems>
+  </Body>
+  <BottomMargin>1in</BottomMargin>
+  <LeftMargin>1in</LeftMargin>
+  <PageHeight>11in</PageHeight>
+  <PageWidth>8.5in</PageWidth>
+  <RightMargin>1in</RightMargin>
+  <TopMargin>1in</TopMargin>
+  <Width>6.5in</Width>
+  <DataSources>
+    <DataSource Name="GTINTest">
+      <ConnectionProperties>
+        <ConnectString>jsondata=[&#xD;
+  {&#xD;
+    "gtin": "07908392217965",&#xD;
+    "gpcCategoryCode": "10005234",&#xD;
+    "brandName": [&#xD;
+      {&#xD;
+        "language": "pt-BR",&#xD;
+        "value": "Auto Clima Brasil"&#xD;
+      }&#xD;
+    ],&#xD;
+    "productDescription": [&#xD;
+      {&#xD;
+        "language": "pt-BR",&#xD;
+        "value": "Trava Mangueira Gol Gv/saveiro/voyage/polo/fox *succao*"&#xD;
+      }&#xD;
+    ],&#xD;
+    "productImageUrl": [&#xD;
+      {&#xD;
+        "language": "pt-BR",&#xD;
+        "value": "https://cnp30blob.blob.core.windows.net/cnp3files/8c2fe4ce-3f5d-41c6-bc0c-2ec13e782a40.jpeg"&#xD;
+      }&#xD;
+    ],&#xD;
+    "netContent": [&#xD;
+      {&#xD;
+        "unitCode": "KGM",&#xD;
+        "value": "0.3"&#xD;
+      }&#xD;
+    ],&#xD;
+    "countryOfSaleCode": [&#xD;
+      {&#xD;
+        "numeric": "076",&#xD;
+        "alpha2": "BR",&#xD;
+        "alpha3": "BRA"&#xD;
+      }&#xD;
+    ],&#xD;
+    "licenseeName": "AUTO CLIMA BRASIL DISTRIBUIDORA DE PECAS LTDA",&#xD;
+    "dateUpdated": "2020-09-13T22:42:56Z",&#xD;
+    "isComplete": true&#xD;
+  }&#xD;
+]</ConnectString>
+        <DataProvider>JSON</DataProvider>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="gtin">
+          <DataField>gtin</DataField>
+        </Field>
+        <Field Name="gpcCategoryCode">
+          <DataField>gpcCategoryCode</DataField>
+        </Field>
+        <Field Name="brandName">
+          <DataField>brandName</DataField>
+        </Field>
+        <Field Name="language">
+          <DataField>brandName[*].language</DataField>
+        </Field>
+        <Field Name="value">
+          <DataField>brandName[*].value</DataField>
+        </Field>
+        <Field Name="productDescription">
+          <DataField>productDescription</DataField>
+        </Field>
+        <Field Name="language1">
+          <DataField>productDescription[*].language</DataField>
+        </Field>
+        <Field Name="value1">
+          <DataField>productDescription[*].value</DataField>
+        </Field>
+        <Field Name="productImageUrl">
+          <DataField>productImageUrl</DataField>
+        </Field>
+        <Field Name="language2">
+          <DataField>productImageUrl[*].language</DataField>
+        </Field>
+        <Field Name="value2">
+          <DataField>productImageUrl[*].value</DataField>
+        </Field>
+        <Field Name="netContent">
+          <DataField>netContent</DataField>
+        </Field>
+        <Field Name="unitCode">
+          <DataField>netContent[*].unitCode</DataField>
+        </Field>
+        <Field Name="value3">
+          <DataField>netContent[*].value</DataField>
+        </Field>
+        <Field Name="countryOfSaleCode">
+          <DataField>countryOfSaleCode</DataField>
+        </Field>
+        <Field Name="numeric">
+          <DataField>countryOfSaleCode[*].numeric</DataField>
+        </Field>
+        <Field Name="alpha2">
+          <DataField>countryOfSaleCode[*].alpha2</DataField>
+        </Field>
+        <Field Name="alpha3">
+          <DataField>countryOfSaleCode[*].alpha3</DataField>
+        </Field>
+        <Field Name="licenseeName">
+          <DataField>licenseeName</DataField>
+        </Field>
+        <Field Name="dateUpdated">
+          <DataField>dateUpdated</DataField>
+        </Field>
+        <Field Name="isComplete">
+          <DataField>isComplete</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <CommandText>$.[*]</CommandText>
+        <DataSourceName>GTINTest</DataSourceName>
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
