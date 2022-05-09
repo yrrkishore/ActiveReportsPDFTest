@@ -19,11 +19,18 @@ namespace ActiveReportsPDFTest
         {
             try
             {
+                string requestBody = String.Empty;
+                using (StreamReader streamReader = new StreamReader(req.Body))
+                {
+                    requestBody = await streamReader.ReadToEndAsync();
+                }
+                
                 // Provide the page report you want to render.
                 System.IO.FileInfo rptPath = new System.IO.FileInfo(@"Report\Test_PDF.rdlx");
 
                 GrapeCity.ActiveReports.PageReport pageReport = new GrapeCity.ActiveReports.PageReport(rptPath);
 
+                //pageReport.Document.LocateDataSource += OnLocateDataSource;
                 // Create an output directory.
                 System.IO.DirectoryInfo outputDirectory = new System.IO.DirectoryInfo(@"C:\MyPDF");
                 outputDirectory.Create();
