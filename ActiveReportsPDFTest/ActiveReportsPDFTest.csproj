@@ -1,17 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+   <_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
   </PropertyGroup>
+		<PropertyGroup>
+	    <DisableGclm>True</DisableGclm>
+	</PropertyGroup>
   <ItemGroup>
-    <None Remove=".gclicx" />
+    <None Remove="func-for-test-proj.gclicx" />
+    <None Remove="Report\Test_PDF.rdlx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include=".gclicx" />
+    <EmbeddedResource Include="func-for-test-proj.gclicx" />
+    <EmbeddedResource Include="Report\Test_PDF.rdlx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="GrapeCity.ActiveReports.Export.Pdf" Version="16.0.2" />
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.0.1" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.13" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
@@ -20,12 +29,6 @@
     <None Update="local.settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-    </None>
-    <None Update="Report\Test_GTIN.rdlx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Report\Test_PDF.rdlx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 </Project>
